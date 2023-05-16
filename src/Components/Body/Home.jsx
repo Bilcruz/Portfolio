@@ -19,8 +19,9 @@ function Home() {
   const handleLetterHover = index => {
     setHoveredIndex(index);
   };
+
   return (
-    <div className='bg-gradient-to-r from-[#070808] to-[#1e312f]'>
+    <div className='bg-gradient-to-r from-[#070808] to-[#1e312f] id="home'>
       <div className=' bg-gradient-to-r from-[#070808] to-[#1e312f]  text-white lg:pt-44 pt-32  h-fit lg:pl-32 '>
         <div className='flex lg:flex-row flex-col'>
           <div className='lg:w-1/2 w-full flex flex-col lg:items-start items-center justify-center px-16 '>
@@ -129,6 +130,7 @@ function Home() {
           <div className='h-1 w-full rounded-full bg-black bg-gradient-to-r from-[#415e7a] to-[#4e464e]'></div>
         </div>
       </div>
+
       <About />
       <Contact />
     </div>

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import Nav from "./Components/Header/Nav";
+// import Nav from "./Components/Header/Nav";
+import Nav from "../src/Components/Header/Nav";
 import Home from "./Components/Body/Home";
+
 function App() {
   return (
     <div>

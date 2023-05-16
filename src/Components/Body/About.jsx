@@ -10,9 +10,9 @@ import "../CSS/box.css";
 
 function About() {
   return (
-    <div className='lg:mt-28 mt-16 lg:pb-52 pb-20'>
-      <div className='w-full  flex lg:flex-row flex-col'>
-        <div className='lg:w-1/2 w-full lg:scale-100 scale-75 flex justify-center items-center'>
+    <div className='lg:mt-28 mt-16 lg:pb-52 pb-20 lg:pt-28' id='about'>
+      <div className='w-full  flex lg:flex-row flex-col-reverse'>
+        <div className='lg:w-1/2 lg:mt-0 mt-20 w-full lg:scale-100 scale-75 flex justify-center items-center'>
           <div className=' '>
             <div className='box'>
               <div className='side front'>
@@ -36,8 +36,8 @@ function About() {
             </div>
           </div>
         </div>
-        <div className='lg:w-1/2 w-full lg:mt-0 mt-20 lg:text-left text-center'>
-          <h1 className='text-white text-4xl font-bold  '>About Me</h1>
+        <div className='lg:w-1/2 w-full lg:mt-0 mt-5 lg:text-left text-center'>
+          <h1 className='text-white text-4xl font-bold'>About Me</h1>
           <p className='lg:w-3/4 w-full lg:px-0 px-6 text-gray-400 font-semibold text-xl mt-5 '>
             I enjoy working closely with design teams to faithfully translate
             their designs right down to the last pixel. Daily, you'll find me

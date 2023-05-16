@@ -4,8 +4,9 @@ import { FaLinkedinIn, FaGithub, FaFacebook, FaTwitter } from "react-icons/fa";
 import Hamburger from "../Hamburger/Hamburger.jsx";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { HiMenu } from "react-icons/hi";
+import { Link } from "react-scroll";
 
-export default function nav() {
+export default function Nav() {
   const [headerBg, setHeaderBg] = useState("bg-black opacity-100");
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -41,36 +42,37 @@ export default function nav() {
           </a>
 
           <button
-            className='md:hidden text-[#e3b007] flex justify-between items-center'
+            className='md:hidden text-[#afbfe0] flex justify-between items-center'
             onClick={handleOpen}
           >
             <HiMenu className='w-8 h-8' />
           </button>
           <div className='md:flex justify-between space-x-5 hidden '>
-            <a
-              href='#'
-              className='text-gray-400 font-bold text-lg hover:text-gray-500 '
+            <Link
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className='text-gray-400 text-lg font-bold cursor-pointer hover:text-gray-500'
             >
               Home
-            </a>
-            <a
-              href='#'
-              className='text-gray-400 text-lg font-bold hover:text-gray-500'
+            </Link>
+            <Link
+              to='about'
+              duration={500}
+              smooth={true}
+              offset={-70}
+              className='text-gray-400 text-lg font-bold cursor-pointer hover:text-gray-500'
             >
               About
-            </a>
-            <a
-              href='#'
-              className='text-gray-400 text-lg font-bold hover:text-gray-500'
-            >
-              Work
-            </a>
-            <a
-              href='#'
-              className='text-gray-400 text-lg font-bold hover:text-gray-500'
+            </Link>
+
+            <Link
+              to='contact'
+              duration={500}
+              smooth={true}
+              offset={-70}
+              className='text-gray-400 text-lg font-bold cursor-pointer hover:text-gray-500'
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className='md:flex justify-between space-x-3 hidden'>

@@ -1,9 +1,13 @@
 import React from "react";
+import { HiArrowSmUp } from "react-icons/hi";
 
 function Contact() {
   return (
-    <div className='text-white lg:mx-14  lg:mt-16 px-5  '>
-      <div className='flex lg:flex-row flex-col w-full bg-[#161515] rounded-xl'>
+    <div className='text-white   lg:mt-16 relative'>
+      <div
+        id='contact'
+        className='flex lg:flex-row flex-col w-full bg-[#161515]'
+      >
         <div className='lg:w-1/2 w-full flex flex-col justify-center items-center text-center  lg:p-24 p-10'>
           <h1 className='lg:text-6xl text-4xl font-bold '>Contact me</h1>
           <p className=' text-xl mt-5 mb-2 text-gray-400'>
@@ -17,20 +21,20 @@ function Contact() {
           <div className=' mb-8'>
             <input
               type='text'
-              className='bg-[#1b1f1f] rounded-lg px-4 py-5 text-white w-4/6  placeholder-gray-500 outline-none'
+              className='bg-[#1b1f1f] rounded-lg px-4 py-3 text-white lg:w-4/6 w-5/6  placeholder-gray-500 outline-none'
               placeholder='Name'
             />
           </div>
           <div className='mb-8'>
             <input
               type='text'
-              className='bg-[#1b1f1f] rounded-lg px-4 py-5 text-white w-4/6  placeholder-gray-500 outline-none'
+              className='bg-[#1b1f1f] rounded-lg px-4 py-3 text-white lg:w-4/6 w-5/6  placeholder-gray-500 outline-none'
               placeholder='Email'
             />
           </div>
           <div className='mb-8'>
             <textarea
-              className='w-4/6 h-40 bg-[#1b1f1f] rounded-lg px-4 py-5 placeholder-gray-500  focus:outline-none resize-none'
+              className=' h-40 lg:w-4/6 w-5/6 bg-[#1b1f1f] rounded-lg px-4 py-5 placeholder-gray-500  focus:outline-none resize-none'
               placeholder='Enter text here...'
             />
           </div>
@@ -39,6 +43,13 @@ function Contact() {
               Send&nbsp;Message
             </button>
           </div>
+        </div>
+        <div className='flex justify-end absolute bottom-5 right-5'>
+          <HiArrowSmUp
+            className='rounded-full bg-white text-black '
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            size={28}
+          />
         </div>
       </div>
     </div>
