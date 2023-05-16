@@ -19,7 +19,26 @@ function Home() {
   const handleLetterHover = index => {
     setHoveredIndex(index);
   };
+  const [hoveredIndex1, setHoveredIndex1] = useState(-1);
 
+  const handleLetterHover1 = index => {
+    setHoveredIndex1(index);
+  };
+  const [hoveredIndex2, setHoveredIndex2] = useState(-1);
+
+  const handleLetterHover2 = index => {
+    setHoveredIndex2(index);
+  };
+  const [hoveredIndex3, setHoveredIndex3] = useState(-1);
+
+  const handleLetterHover3 = index => {
+    setHoveredIndex3(index);
+  };
+  const [hoveredIndex4, setHoveredIndex4] = useState(-1);
+
+  const handleLetterHover4 = index => {
+    setHoveredIndex4(index);
+  };
   return (
     <div className='bg-gradient-to-r from-[#070808] to-[#1e312f] id="home'>
       <div className=' bg-gradient-to-r from-[#070808] to-[#1e312f]  text-white lg:pt-44 pt-32  h-fit lg:pl-32 '>
@@ -41,14 +60,28 @@ function Home() {
                   </span>
                 ))}
                 <> </>
-                {"I'mBilal".split("").map((letter, index) => (
+                {"I'm".split("").map((letter, index) => (
                   <span
                     key={index}
                     className={`inline-block cursor-pointer hover:animate-bounce ${
-                      hoveredIndex === index ? "animate-bounce" : ""
+                      hoveredIndex1 === index ? "animate-bounce" : ""
                     }`}
-                    onMouseEnter={() => handleLetterHover(index)}
-                    onMouseLeave={() => setHoveredIndex(-1)}
+                    onMouseEnter={() => handleLetterHover1(index)}
+                    onMouseLeave={() => setHoveredIndex1(-1)}
+                    style={{ paddingTop: "5px", paddingBottom: "5px" }}
+                  >
+                    {letter}
+                  </span>
+                ))}
+                <> </>
+                {"Bilal".split("").map((letter, index) => (
+                  <span
+                    key={index}
+                    className={`inline-block cursor-pointer hover:animate-bounce ${
+                      hoveredIndex2 === index ? "animate-bounce" : ""
+                    }`}
+                    onMouseEnter={() => handleLetterHover2(index)}
+                    onMouseLeave={() => setHoveredIndex2(-1)}
                     style={{ paddingTop: "5px", paddingBottom: "5px" }}
                   >
                     {letter}
@@ -56,14 +89,28 @@ function Home() {
                 ))}
               </div>
               <div className='lg:text-left text-center'>
-                {"WebDeveloper".split("").map((letter, index) => (
+                {"Web".split("").map((letter, index) => (
                   <span
                     key={index}
                     className={`inline-block cursor-pointer hover:animate-bounce ${
-                      hoveredIndex === index + 12 ? "animate-bounce" : ""
+                      hoveredIndex3 === index + 12 ? "animate-bounce" : ""
                     }`}
-                    onMouseEnter={() => handleLetterHover(index + 12)}
-                    onMouseLeave={() => setHoveredIndex(-1)}
+                    onMouseEnter={() => handleLetterHover3(index + 12)}
+                    onMouseLeave={() => setHoveredIndex3(-1)}
+                    style={{ paddingTop: "5px", paddingBottom: "5px" }}
+                  >
+                    {letter}
+                  </span>
+                ))}
+                <> </>
+                {"Developer".split("").map((letter, index) => (
+                  <span
+                    key={index}
+                    className={`inline-block cursor-pointer hover:animate-bounce ${
+                      hoveredIndex4 === index ? "animate-bounce" : ""
+                    }`}
+                    onMouseEnter={() => handleLetterHover4(index)}
+                    onMouseLeave={() => setHoveredIndex4(-1)}
                     style={{ paddingTop: "5px", paddingBottom: "5px" }}
                   >
                     {letter}
