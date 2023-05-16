@@ -9,7 +9,7 @@ function Hamburger({ setIsOpen }) {
     <div>
       <div className='lg:hidden opacity-100 backdrop-blur fixed top-0 l-0 w-full h-full flex justify-end z-50'>
         <button
-          className='w-fit h-fit mt-5 -mr-96 pr-2 rounded-md z-50 text-[#3a5791]'
+          className='w-fit h-fit absolute top-5 right-4  rounded-md  text-[#3a5791]'
           onClick={() => setIsOpen(!setIsOpen)}
         >
           <HiX className='h-7 w-7 text-[#afbfe0]' size={14} />
