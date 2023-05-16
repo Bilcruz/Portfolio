@@ -24,6 +24,7 @@ function Contact() {
           console.log(error.text);
         }
       );
+    e.target.reset();
   };
   return (
     <div className='text-white   lg:mt-16 relative'>
